@@ -21,74 +21,91 @@
   </head>
   <body>
     <main class="main container">
-      <header class="header">
-        <img src="./assets/image/logo.svg" alt="Logo Alura" />
-
-        <h1>Decoder</h1>
-      </header>
-
       <div class="content">
-        <section class="input">
-          <textarea
-            name="input-text"
-            id="input-text"
-            cols="30"
-            rows="10"
-            placeholder="Digite seu texto aqui!"
-            autofocus
-          ></textarea>
+        <div>
+          <header class="header">
+            <a href="#" class="title">
+              <h1><span>D</span><span>e</span>coder</h1>
+            </a>
+          </header>
 
-          <div class="actions">
-            <div class="information">
-              <img
-                src="./assets/icons/exclamation-circle-fill.svg"
-                alt="Exclamation circle fill icon"
-              />
+          <section class="input">
+            <textarea
+              class="input-text"
+              name="input-text"
+              id="input-text"
+              cols="30"
+              rows="10"
+              placeholder="Digite seu texto aqui!"
+              autofocus
+            ></textarea>
 
-              <p>Apenas letras minúsculas e sem acento.</p>
+            <div class="actions">
+              <div class="information">
+                <img
+                  src="./assets/icons/exclamation-circle-fill.svg"
+                  alt="Exclamation circle fill icon"
+                />
+
+                <p>Apenas letras minúsculas e sem acento.</p>
+              </div>
+
+              <div class="buttons">
+                <input class="cripto-btn" type="button" value="Criptografar" />
+
+                <input
+                  class="encripto-btn"
+                  type="button"
+                  value="Descriptografar"
+                />
+              </div>
             </div>
-
-            <div class="buttons">
-              <input class="cripto-btn" type="button" value="Criptografar" />
-
-              <input
-                class="encripto-btn"
-                type="button"
-                value="Descriptografar"
-              />
-            </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
         <section class="output">
           <img src="./assets/image/hero.svg" alt="Hero image" />
 
-          <h2>Nenhuma mensagem encontrada</h2>
+          <div class="not-found">
+            <h2>Nenhuma mensagem encontrada</h2>
 
-          <p>
-            Digite um texto que você deseja criptografar ou descriptografar.
-          </p>
+            <p>
+              Digite um texto que você deseja criptografar ou descriptografar.
+            </p>
+          </div>
         </section>
       </div>
     </main>
 
     <footer class="footer">
-      <div class="social">
-        <a
-          href="https://www.linkedin.com/in/alexandresmenezes/"
-          target="_blank"
-        >
-          <img src="./assets/icons/linkedin.svg" alt="LinkedIn icon" />
+      <div class="credits">
+        <a class="logo" href="https://alura.com.br" target="_blank">
+          <img src="./assets/image/logo.svg" alt="Logo Alura" />
         </a>
 
-        <a href="https://github.com/alexandresantosm" target="_blank">
-          <img src="./assets/icons/github.svg" alt="GitHub icon" />
-        </a>
+        <p class="copyright">
+          &copy; Copyright - Decodificador de Textos - 2022.
+        </p>
       </div>
 
-      <p>Desenvolvido por <strong>Alexandre Menezes</strong>.</p>
+      <div class="divisor"></div>
 
-      <p class="copyright">&copy; Copyright Decodificador de Textos - 2022.</p>
+      <div class="developer">
+        <div class="social">
+          <a
+            href="https://www.linkedin.com/in/alexandresmenezes/"
+            target="_blank"
+          >
+            <img src="./assets/icons/linkedin.svg" alt="LinkedIn icon" />
+          </a>
+
+          <a href="https://github.com/alexandresantosm" target="_blank">
+            <img src="./assets/icons/github.svg" alt="GitHub icon" />
+          </a>
+        </div>
+
+        <p>Desenvolvido por <strong>Alexandre Menezes</strong>.</p>
+      </div>
     </footer>
   </body>
 </html>
