@@ -51,12 +51,18 @@
               </div>
 
               <div class="buttons">
-                <input class="cripto-btn" type="button" value="Criptografar" />
+                <input
+                  class="cripto-btn btn"
+                  type="button"
+                  value="Criptografar"
+                  onclick="handleClickEncode()"
+                />
 
                 <input
-                  class="encripto-btn"
+                  class="encripto-btn btn"
                   type="button"
                   value="Descriptografar"
+                  onclick="handleClickDecode()"
                 />
               </div>
             </div>
@@ -107,5 +113,7 @@
         <p>Desenvolvido por <strong>Alexandre Menezes</strong>.</p>
       </div>
     </footer>
+
+    <script src="./assets/js/main.js"></script>
   </body>
 </html>
