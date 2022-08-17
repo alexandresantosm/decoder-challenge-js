@@ -168,6 +168,77 @@ textarea::placeholder {
   justify-content: space-between;
 }
 
+/* Popup container - can be anything you want */
+.copy {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.copy .popup-text {
+  visibility: hidden;
+  width: 16rem;
+  background-color: var(--light-blue-400);
+  color: var(--dark-blue-400);
+  text-align: center;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -8rem;
+}
+
+/* Popup arrow */
+.copy .popup-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -0.5rem;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-color: var(--light-blue-400) transparent transparent transparent;
+}
+
+/* Toggle this class - hide and show the popup */
+.copy .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 2s ease;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .copy-btn {
   width: 24rem;
   padding: 2.4rem;

@@ -15,11 +15,16 @@ function handleClickEncode() {
 }
 
 function handleClickDecode() {
+  const textOutput = document.querySelector("#output-text");
   const messageToDecode = textInput.value;
   const messageDecoded = decode(messageToDecode);
 
-  console.log(messageDecoded);
+  textOutput.value = messageDecoded;
   clearInput(textInput);
+}
+
+function handleClickCopy() {
+  copyToClipboard();
 }
 
 function handleInputChange() {
@@ -32,15 +37,21 @@ function handleInputChange() {
         class="output-text"
         name="output-text"
         id="output-text"
+        cols="30"
+        rows="10"
         readonly>
       </textarea>
 
-      <input
-        class="copy-btn btn"
-        type="button"
-        value="Copiar"
-        onclick="handleClickCopy()"
-      />
+      <div class="copy">
+        <span class="popup-text" id="popup">Mensagem copiada com sucesso!</span>
+
+        <input
+          class="copy-btn btn"
+          type="button"
+          value="Copiar"
+          onclick="handleClickCopy()"
+        />
+      </div>
     `;
   } else {
     return;
@@ -80,4 +91,23 @@ function decode(message) {
 
 function clearInput(input) {
   input.value = "";
+}
+
+function copyToClipboard() {
+  const textOutput = document.querySelector(".output-text");
+  const copyText = textOutput.value;
+
+  navigator.clipboard.writeText(copyText).then(() => {
+    showPopup();
+  });
+}
+
+function showPopup() {
+  const popup = document.getElementById("popup");
+
+  popup.classList.toggle("show");
+
+  setTimeout(() => {
+    popup.classList.remove("show");
+  }, 5000);
 }
